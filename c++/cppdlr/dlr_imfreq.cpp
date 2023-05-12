@@ -43,6 +43,12 @@ namespace cppdlr {
       for (int j = 0; j < r; ++j) { cf2if(i, j) = kmat(piv(i), j); }
     }
 
+    if( statistic == Boson ) {
+      for (int i = 0; i < r; ++i) {
+        for (int j = 0; j < r; ++j) { cf2if(i, j) *= -std::tanh(0.5 * dlr_rf(j)); }
+      }
+    } 
+    
     // Prepare imaginary time values to coefficients transformation by computing
     // LU factors of coefficient to imaginary time matrix
     if2cf.lu = cf2if;
