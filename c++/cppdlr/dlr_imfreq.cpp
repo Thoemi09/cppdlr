@@ -45,7 +45,7 @@ namespace cppdlr {
 
     if( statistic == Boson ) {
       for (int i = 0; i < r; ++i) {
-        for (int j = 0; j < r; ++j) { cf2if(i, j) *= -std::tanh(0.5 * dlr_rf(j)); }
+        for (int j = 0; j < r; ++j) { cf2if(i, j) *= std::tanh(0.5 * dlr_rf(j)); }
       }
     } 
     
