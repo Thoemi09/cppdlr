@@ -120,7 +120,6 @@ TEST(imtime_ops, interp_matrix) {
   }
 
   EXPECT_LT(err, 10 * eps);
-  PRINT(err);
 }
 
 /**
@@ -742,7 +741,6 @@ TEST(imtime_ops, interp_matrix_sym) {
   }
 
   EXPECT_LT(err, 10 * eps);
-  PRINT(err);
 }
 
 TEST(dlr_imtime, h5_rw) {
